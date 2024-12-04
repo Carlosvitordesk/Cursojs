@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#area{
+            font: normal 20pt arial;
+            background-color: rgba(138, 26, 26, 0.603);
+            color:white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+
+        }
+    </style>
+</head>
+<body> 
+    <!--onclick- significa 'Ao Clicar', onmouseenter-'Ao entrar, onmouseout- 'Ao Sair' '--> 
+    <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">
+       interaja...
+    </div>
+
+    <script>
+        //O var esta do lado de fora pq serve como chave geral pras funções.
+        var e = window.document.getElementById('area');
+        //comando que pode substituir o camando na DIV, deixando só com o ID.
+        a.addEventListenner('click', clicar)
+        a.addEventListenner('mouseenter', entrar)
+        a.addEventListenner('mouseout', sair)
+
+         function clicar() {
+            //Comando pra 'chamar a DIV'
+            a.innerText = 'clicou!'
+            a.style.background = 'blue'
+
+         }
+
+         function entrar() {
+            a.innerText = 'entrou'
+           
+         }
+
+         function sair() {
+            a.innerText = 'sair'
+            a.style.background = 'green'
+         }
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velocidade</title>
+
+    <Style>
+        body{
+            background-color: rgb(20, 126, 126);
+            color:white;
+        }
+
+        h1{
+            text-align: center;
+            font:  normal 20pt arial;
+            text-decoration: underline;
+        }
+    </Style>
+</head>
+<body>
+    <h1>Teste de velocidade</h1>
+    Velocidade do carro: <input type="number" name="textvel" id="textvel"> Km/h.
+    <input type="button" value="verificar" onclick="calcular()">
+    <div id="res">
+
+    </div>
+    <script>
+
+      function calcular(){
+
+        var testvel = window.document.getElementById('textvel')
+        var res = window.document.getElementById('res')
+        var vel = parseFloat(testvel.value)
+        res.innerHTML ='<p> Sua Velocidade é de:</p>' + vel
+        res.innerHTML+= '<p>Coloque o Sinto de Segurança!!!</p>'
+
+        if( vel > 70){
+            res.innerHTML = '<p> Vc ultrapassou o <strong>LIMITE</strong> de Velocidade, <strong>MULTADO!!!!!</strong>'
+
+            res.innerHTML += '<p> Por Favor!!! Diminua <strong>IMEDIATAMENTE</strong> a Velocidade.'
+        }
+      }
+
+    </script>
+</body>
+</html>
